@@ -29,14 +29,13 @@ console.log("currentStreak", maxAllTimeStreak);
 //or middle two characters
 function getMiddle(s){
   if(s.length % 2 !== 0) {
-    console.log(s.charAt(s.length/2));
     return s.charAt(s.length/2);
   } else {
-    var mean = s.length/2
-    var mid1 = s.charAt(Math.floor(mean));
-    var mid2 = s.charAt(Math.ceil(mean));
-    console.log(mid1+mid2);
+    var mean = s.length/2;
+    var mid1 = s.charAt(mean-1);
+    var mid2 = s.charAt((mean));
     return mid1+mid2;
   }
 }
+
 getMiddle('apple');
