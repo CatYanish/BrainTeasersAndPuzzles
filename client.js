@@ -27,13 +27,13 @@ console.log("currentStreak", maxAllTimeStreak);
 
 //this function takes in a string and returns the middle character
 //or middle two characters
-function getMiddle(s){
-  if(s.length % 2 !== 0) {
-    return s.charAt(s.length/2);
+function getMiddle(string){
+  if(string.length % 2 !== 0) {
+    return string.charAt(string.length/2);
   } else {
-    var mean = s.length/2;
-    var mid1 = s.charAt(mean-1);
-    var mid2 = s.charAt((mean));
+    var mean = string.length/2;
+    var mid1 = string.charAt(mean-1);
+    var mid2 = string.charAt((mean));
     return mid1+mid2;
   }
 }
