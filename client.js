@@ -20,7 +20,7 @@ var findMaxConsecutiveOnes = function(nums) {
   }
   return maxAllTimeStreak
 };
-findmaxAllTimeStreakutiveOnes(input);
+findMaxConsecutiveOnes(input);
 console.log("currentStreak", maxAllTimeStreak);
 
 
@@ -39,3 +39,31 @@ function getMiddle(string){
 }
 
 getMiddle('apple');
+
+
+inputIQ = [1,2,3,7,9];
+
+var indexOfException;
+
+iqTest(inputIQ);
+
+function iqTest(numbers){
+  if (numbers[0] % 2 === 0) {
+    for (var i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 !== 0) {
+        indexOfException = numbers.indexOf(numbers[i]);
+        indexOfException += 1;
+        console.log('this is the position of outlier in array', indexOfException);
+      }
+    }
+  }
+  else if (numbers[0] % 2 !== 0) {
+    for (var i = 0; i < numbers.length; i++) {
+      if (numbers[i] % 2 == 0) {
+        indexOfException = numbers.indexOf(numbers[i]);
+        indexOfException += 1;
+        console.log('this is the position of outlier in array', indexOfException);
+      }
+    }
+  }
+}
