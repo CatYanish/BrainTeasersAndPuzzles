@@ -47,6 +47,8 @@ var indexOfException;
 
 iqTest(inputIQ);
 
+//this function takes in an array and checks if first number is even or odd
+//then loops through all numbers to find one that doesn't match the even/odd-ness of the first
 function iqTest(numbers){
   if (numbers[0] % 2 === 0) {
     for (var i = 0; i < numbers.length; i++) {
