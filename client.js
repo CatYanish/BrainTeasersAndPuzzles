@@ -110,3 +110,21 @@ function findNumbersBetween() {
 }
 
 findNumbersBetween(l, r);
+
+
+
+
+function main() {
+    var n = 4;
+    var k = 4;
+    a = [1,2,3,4,5]
+
+    for(var i = 0; i < k; i++) {
+        var moveNum = (a.shift(i));
+        a.push(moveNum);
+        var answer = a.join(' ');
+    }
+  console.log(answer);
+}
+
+main();
