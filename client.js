@@ -69,3 +69,44 @@ function iqTest(numbers){
     }
   }
 }
+
+
+var arr = [1,2,3,4,5];
+var isPresent;
+
+function findNumber(arr, k) {
+  for (var i = 0; i < arr.length; i++) {
+    if (arr[i] == k) {
+      console.log("YES");
+      isPresent = "YES";
+    } else {
+      console.log("NO");
+      isPresent = "NO";
+    }
+  }
+  return isPresent;
+}
+
+findNumber(arr, 5);
+
+console.log(findNumber(arr, 5));
+
+var numbersBetween = [];
+var l = 2;
+var r = 12;
+
+var oddOnes = [];
+
+function findNumbersBetween() {
+  for (var j = l; j <= r; j++) {
+    numbersBetween.push(j);
+  }
+  for (var i = 0; i < numbersBetween.length; i++) {
+    if(numbersBetween[i] % 2 !== 0) {
+      oddOnes.push(numbersBetween[i]);
+    }
+  }
+  console.log(oddOnes);
+}
+
+findNumbersBetween(l, r);
