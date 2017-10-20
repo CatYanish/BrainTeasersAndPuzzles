@@ -128,3 +128,31 @@ function main() {
 }
 
 main();
+
+var commonLetters = [];
+var a = [ 'a','b','c'];
+var b = ['c','d','e'];
+
+commonCharacters();
+
+function commonCharacters () {
+  console.log('commonCharacters called');
+  for (var i = 0; i < a.length; i++) {
+    for (var j = 0; j < b.length; j++) {
+      if (a[i] === b[j]) {
+          commonLetters.push(a[i], b[j]);
+      }
+    }
+  }
+  compare(a, b);
+}
+
+
+function compare(a, b) {
+  console.log('compare called');
+  var joined = a.concat(b);
+  console.log(joined.length);
+  var characterDiff = joined.length - commonLetters.length;
+  console.log('commenLetters', commonLetters);
+  console.log('difference', characterDiff);
+}
