@@ -156,3 +156,35 @@ function compare(a, b) {
   console.log('commenLetters', commonLetters);
   console.log('difference', characterDiff);
 }
+
+
+
+//digital root function
+// for input number, add up all digits of input numbers
+// if the output of this operation is not a single-digit answer,
+//repeat until output is a single digit number
+var digitalRootNumber = 314;
+var digitalRootOutput = 0;
+
+
+
+function findDigitalRoot(n) {
+  console.log("findDigitalRoot function called");
+  console.log('n.toString.length', toString(n));
+  if(n.length > 1){
+    var arrayOfInts = n.toString().split("").map(Number)
+    console.log(arrayOfInts);
+    for (var i = 0; i < arrayOfInts.length; i++) {
+      digitalRootOutput += arrayOfInts[i];
+      console.log(digitalRootOutput);
+      if(digitalRootOutput.length > 1) {
+        findDigitalRoot(digitalRootOutput);
+      }
+    }
+  } else {
+    console.log("n.length is 1");
+    digitalRootOutput = n;
+  }
+}
+
+findDigitalRoot(digitalRootNumber);
