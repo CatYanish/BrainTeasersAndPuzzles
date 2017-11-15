@@ -115,15 +115,15 @@ findNumbersBetween(l, r);
 
 
 function main() {
-    var n = 4;
-    var k = 4;
-    a = [1,2,3,4,5]
+  var n = 4;
+  var k = 4;
+  a = [1,2,3,4,5]
 
-    for(var i = 0; i < k; i++) {
-        var moveNum = (a.shift(i));
-        a.push(moveNum);
-        var answer = a.join(' ');
-    }
+  for(var i = 0; i < k; i++) {
+    var moveNum = (a.shift(i));
+    a.push(moveNum);
+    var answer = a.join(' ');
+  }
   console.log(answer);
 }
 
@@ -140,7 +140,7 @@ function commonCharacters () {
   for (var i = 0; i < a.length; i++) {
     for (var j = 0; j < b.length; j++) {
       if (a[i] === b[j]) {
-          commonLetters.push(a[i], b[j]);
+        commonLetters.push(a[i], b[j]);
       }
     }
   }
@@ -169,22 +169,21 @@ var digitalRootOutput = 0;
 
 
 function findDigitalRoot(n) {
-  console.log("findDigitalRoot function called");
-  console.log('n.toString.length', toString(n));
-  if(n.length > 1){
+  if(n.toString().length > 1){
+    console.log('made it into if else statement');
     var arrayOfInts = n.toString().split("").map(Number)
     console.log(arrayOfInts);
     for (var i = 0; i < arrayOfInts.length; i++) {
       digitalRootOutput += arrayOfInts[i];
-      console.log(digitalRootOutput);
-      if(digitalRootOutput.length > 1) {
-        findDigitalRoot(digitalRootOutput);
-      }
+      console.log("this is output", digitalRootOutput);
     }
-  } else {
+    // findDigitalRoot(digitalRootOutput);
+  } else if (n.toString().length === 1) {
     console.log("n.length is 1");
     digitalRootOutput = n;
   }
+  return digitalRootOutput;
 }
 
-findDigitalRoot(digitalRootNumber);
+
+findDigitalRoot(31499);
