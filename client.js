@@ -165,24 +165,36 @@ function compare(a, b) {
 //repeat until output is a single digit number
 var digitalRootNumber = 314;
 var digitalRootOutput = 0;
-
+var repeatInput;
 
 
 function findDigitalRoot(n) {
   if(n.toString().length > 1){
-    console.log('made it into if else statement');
     var arrayOfInts = n.toString().split("").map(Number)
     console.log(arrayOfInts);
     for (var i = 0; i < arrayOfInts.length; i++) {
       digitalRootOutput += arrayOfInts[i];
       console.log("this is output", digitalRootOutput);
     }
+    checkLength(digitalRootOutput);
     // findDigitalRoot(digitalRootOutput);
   } else if (n.toString().length === 1) {
     console.log("n.length is 1");
     digitalRootOutput = n;
   }
   return digitalRootOutput;
+}
+
+
+
+function checkLength(n) {
+  console.log('this should be digitalrootoutput', n);
+  if (n.toString().length > 1) {
+    repeatInput = n;
+    digitalRootOutput = 0;
+    console.log('this is repeatInput', repeatInput);
+    findDigitalRoot(repeatInput);
+  }
 }
 
 
