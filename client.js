@@ -167,17 +167,17 @@ var digitalRootNumber = 314;
 var digitalRootOutput = 0;
 var repeatInput;
 
-
+//function checks if length of number is longer than one.
+//if longer than one, separates number into an array, and for loop
+//adds each index to the digitalRootOutput variable, which acts at the sum
 function findDigitalRoot(n) {
   if(n.toString().length > 1){
     var arrayOfInts = n.toString().split("").map(Number)
-    console.log(arrayOfInts);
     for (var i = 0; i < arrayOfInts.length; i++) {
       digitalRootOutput += arrayOfInts[i];
       console.log("this is output", digitalRootOutput);
     }
     checkLength(digitalRootOutput);
-    // findDigitalRoot(digitalRootOutput);
   } else if (n.toString().length === 1) {
     console.log("n.length is 1");
     digitalRootOutput = n;
@@ -198,4 +198,4 @@ function checkLength(n) {
 }
 
 
-findDigitalRoot(31499);
+findDigitalRoot(14159265);
