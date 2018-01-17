@@ -70,6 +70,9 @@ function iqTest(numbers){
   }
 }
 
+//on second thought, the smarter thing to do here might be to loop through all, and put all even in an array called 'even'
+//and all odd in an array called 'odd' and then compare the two array lengths at the end. Set the value in shorter array to the "oddDuckOut" variable.
+
 
 var arr = [1,2,3,4,5];
 var isPresent;
